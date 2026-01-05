@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#1d2630] text-white">
+    <div class="container mx-auto my-5">
+        <!-- TITLE -->
+        <div class="text-center">
+            <h1 class="text-4xl font-semibold mb-10">CRUD Application</h1>
+        </div>
+
+        <!-- ALERT CONTAINER -->
+        <div id="alert-container" class="max-w-5xl mx-auto mb-6"></div>
+
+        <!-- FORM -->
+        <div class="main flex justify-center">
+            <form action="" id="student-form" class="mx-auto max-w-4xl w-full flex flex-col gap-4 justify-center mb-4" autocomplete="off">
+            <div class="space-y-2 mb-3">
+                <label for="firstName" class="block">First Name</label>
+                <input type="text" id="firstName" class="bg-white rounded-md placeholder-gray-400 text-black p-2 w-full" placeholder="Enter First Name">
+            </div>
+            <div class="space-y-2 mb-3">
+                <label for="lastName" class="block">Last Name</label>
+                <input type="text" id="lastName" class="bg-white rounded-md placeholder-gray-400 text-black p-2 w-full" placeholder="Enter Last Name">
+            </div>
+            <div class="space-y-2 mb-3">
+                <label for="rollNumber" class="block">Roll Number</label>
+                <input type="text" id="rollNumber" class="bg-white rounded-md placeholder-gray-400 text-black p-2 w-full" placeholder="Enter Roll Number">
+            </div>
+            <button type="submit" class="self-start w-24 bg-green-600 rounded-md p-2 hover:bg-green-600/50 cursor-pointer">Submit</button>
+        </form>
+        </div>
+
+        <!-- TABLE -->
+        <div class="mt-10">
+            <table class="mx-auto max-w-5xl w-full border-collapse border border-gray-300">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="border border-gray-300 px-4 py-2">First Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Last Name</th>
+                        <th class="border border-gray-300 px-4 py-2">Roll Number</th>
+                        <th class="border border-gray-300 px-4 py-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="student-list">
+                    <tr class="even:bg-gray-700 odd:bg-gray-400">
+                        <td class="border border-gray-300 px-4 py-2">John</td>
+                        <td class="border border-gray-300 px-4 py-2">Doe</td>
+                        <td class="border border-gray-300 px-4 py-2">123</td>
+                        <td class="px-4 py-2">
+                            <div class="space-x-2">
+                                <button class="px-4 py-2 my-2 bg-yellow-500 rounded-lg cursor-pointer hover:bg-yellow-500/50 edit">Edit</button>
+                                <button class="px-4 py-2 bg-red-500 rounded-lg cursor-pointer hover:bg-red-500/50 delete">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="even:bg-gray-700 odd:bg-gray-400">
+                        <td class="border border-gray-300 px-4 py-2">John</td>
+                        <td class="border border-gray-300 px-4 py-2">Doe</td>
+                        <td class="border border-gray-300 px-4 py-2">123</td>
+                        <td class="px-4 py-2">
+                            <div class="space-x-2">
+                                <button class="px-4 py-2 my-2 bg-yellow-500 rounded-lg cursor-pointer hover:bg-yellow-500/50 edit">Edit</button>
+                                <button class="px-4 py-2 bg-red-500 rounded-lg cursor-pointer hover:bg-red-500/50 delete">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="even:bg-gray-700 odd:bg-gray-400">
+                        <td class="border border-gray-300 px-4 py-2">John</td>
+                        <td class="border border-gray-300 px-4 py-2">Doe</td>
+                        <td class="border border-gray-300 px-4 py-2">123</td>
+                        <td class="px-4 py-2">
+                            <div class="space-x-2">
+                                <button class="px-4 py-2 my-2 bg-yellow-500 rounded-lg cursor-pointer hover:bg-yellow-500/50 edit">Edit</button>
+                                <button class="px-4 py-2 bg-red-500 rounded-lg cursor-pointer hover:bg-red-500/50 delete">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
